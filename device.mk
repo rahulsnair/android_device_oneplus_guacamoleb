@@ -13,15 +13,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=560 \
-    persist.vendor.sensors.light.location_x=1000 \
-    persist.vendor.sensors.light.location_y=260
+    ro.sf.lcd_density=408
 
-PRODUCT_PACKAGES += \
-    init.display.guacamole.rc
-
-# Camera
-PRODUCT_PACKAGES += \
-    vendor.lineage.camera.motor@1.0 \
-    vendor.lineage.camera.motor@1.0-service.oneplus_msmnile \
-    OnePlusCameraHelper
+# Light [WIP]
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    persist.vendor.sensors.light.location_x=1000 \
+#    persist.vendor.sensors.light.location_y=260
