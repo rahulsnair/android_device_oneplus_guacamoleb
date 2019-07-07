@@ -5,6 +5,9 @@
 #
 $(call inherit-product, device/oneplus/sm8150-common/common.mk)
 
+# Get non-open-source specific aspects
+$(call inherit-product-if-exists, vendor/oneplus/guacamoleb/guacamoleb-vendor.mk)
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
